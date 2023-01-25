@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&display=swap');
+
+:root{
+    --yellow: #fcdd26;
+    --grey: #333;
+    --white: #fff;
+}
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    border: none; outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--yellow);
+    color: var(--grey);
+}
+
+section{
+    padding: 1rem 3%;
+}
+
+html::-webkit-scrollbar{
+    width: 1.2rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--grey);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+    border-radius: .5rem;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--yellow);
+    font-size: 1.2rem;
+    color: var(--grey);
+    text-align: center;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+.btn:hover{
+    background: var(--grey);
+    color: var(--yellow);
+}
+
+.heading{
+    font-size: 2rem;
+    color: var(--grey);
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.heading i{
+    font-size: 2.2rem;
+    color: var(--yellow);
+}
+
+
+/* ..................... Header ............. */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0px; left: 0px; width: 100%;
+    z-index: 1000;
+    background: var(--white);
+}
+
+header .logo{
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+header .logo i{
+    font-size: 2.3rem;
+    color: var(--yellow);
+    transform: rotate(-65deg);
+}
+
+header .logo i:hover{
+    color: var(--grey);
+}
+
+header .navbar a{
+    font-size: 1.6rem;
+    color: var(--grey);
+    margin-right: .8rem;
+} 
+
+header .navbar a:hover{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+header .icons i{
+    color: var(--grey);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-right: .5rem;
+}
+
+header .icons i:hover{
+    color: var(--yellow);
+}
+
+header .search-bar{
+    position: absolute;
+    top: 100%; left: 0; width: 100%;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+}
+
+header .search-bar.active{
+    transform: scaleY(1);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+}
+
+header .search-bar input{
+    width: 100%;
+    border-radius: .5rem;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    color: var(--grey);
+    text-transform: none;
+}
+
+header .search-bar input::placeholder{
+    text-transform: capitalize;
+}
+
+header .search-bar label{
+    font-size: 1.5rem;
+    color: var(--grey);
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+
+/* .................. Home ............. */
+
+.home{
+    height: 80vh;
+    background: url(../images/home-bg.webp) center no-repeat;
+    background-size: cover;
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content{
+    padding-left: 5%;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+.home .content  h1{
+    font-size: 4rem;
+    color: var(--grey);
+}
+
+.home .content .btn{
+    background: var(--white);
+}
+
+.home .content .btn:hover{
+    background: var(--grey);
+}
+
+
+/* ................... Category ............. */
+
+.category .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category .inner .box{
+    width: 24%;
+    text-align: center;
+}
+
+.category .inner .box img{
+    width: 100%;
+}
+
+.category .inner .box h3{
+    font-size: 1.5rem;
+    color: var(--grey);
+    margin-bottom: .5rem;
+}
+
+/* ................... Featured ............. */
+
+.featured .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.featured .inner .box{
+    width: 49%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured .inner .box:hover{
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+}
+
+.featured .inner .box img{
+    width: 40%;
+}
+
+.featured .inner .box .price{
+    position: absolute;
+    top: 2rem; right: 2rem;
+    background: var(--yellow);
+    border-radius: 50%;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 1.4rem;
+    color: var(--grey);
+}
+
+.featured .inner .box .content .stars i{
+    font-size: 1.3rem;
+    color: var(--yellow);
+}
+
+.featured .inner .box .content h3{
+    font-size: 1.7rem;
+    color: var(--grey);
+    margin-bottom: .3rem;
+}
+
+.featured .inner .box .content p{
+    font-size: 1.3rem;
+    color: var(--grey);
+    margin-bottom: .3rem;
+}
+
+/* ................... Deal ............. */
+
+.deal{
+    height: 75vh;
+    background: url(../images/deal-bg.webp) no-repeat center;
+    background-size: cover;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.deal .content span{
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.deal .content h2{
+    font-size: 3rem;
+    color: var(--grey);
+    margin: .3rem 0;
+}
+
+/* ................... Products ............. */
+
+.products .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.products .inner .box{
+    width: 23%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.products .inner .box:hover{
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+}
+
+.products .inner .box img{
+    width: 49%;
+}
+
+.products .inner .box .content .stars i{
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+.products .inner .box .content h4{
+    font-size: 1.3rem;
+    color: var(--grey);
+    margin-top: .2rem;
+}
+
+.products .inner .box .content p{
+    font-size: 1.2rem;
+    color: var(--grey);
+    margin: .3rem 0;
+}
+
+.products .inner .box .content p span{
+    font-size: 1rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.products .inner .box .content .btn{
+    font-size: 1rem;
+}
+
+/* ................... Offer ............. */
+
+.offer .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.offer .inner .box{
+    position: relative;
+    width: 49%; 
+}
+
+.offer .inner .box img{
+    width: 100%;
+}
+
+.offer .inner .box .content{
+    position: absolute;
+    top: 40%; left: 10%;
+}
+
+.offer .inner .box .content span{
+    font-size: 1.5rem;
+    color: var(--grey);
+}
+
+.offer .inner .box .content h3{
+    -webkit-flow-into: 2rem;
+    color: var(--grey);
+}
+
+.offer .inner .box .content .btn{
+    background: var(--white);
+}
+
+.offer .inner .box .content .btn:hover{
+    background: var(--grey);
+}
+
+/* ................... Contact ............. */
+
+.contact{
+    background: url(../images/contact-bg.webp) no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    margin-top: 5rem;
+}
+
+.contact .heading i{
+    color: var(--white);
+}
+
+.contact form{
+    text-align: center;
+}
+
+.contact form .inputbox{
+    display: flex;
+    justify-content: center;
+}
+
+.contact form .inputbox input{
+    width: 49%;
+    margin: .5rem;
+    font-size: 1.2rem;
+    color: var(--grey);
+    border-radius: .5rem;
+    padding: .5rem;
+    text-transform: none;
+}
+
+.contact form .inputbox input::placeholder{
+    text-transform: capitalize;
+}
+
+.contact form textarea{
+    width: 99%;
+    resize: none;
+    height: 20rem;
+    font-size: 1.2rem;
+    color: var(--grey);
+    padding: .5rem;
+    text-transform: none;
+}
+
+.contact form .btn{
+    background: var(--white);
+    cursor: pointer;
+}
+
+.contact form .btn:hover{
+    background: var(--grey);
+}
+
+/* ................... Footer ............. */
+
+footer{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer .social .btn{
+    background: #555;
+}
+
+footer .social a i{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+footer .created{
+    font-size: 1.3rem;
+    color: var(--grey);
+    margin-top: 1rem;
+}
+
+footer .created span{
+    color: var(--yellow);
+}
+
+footer .created span:hover{
+    color: var(--grey);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media(max-width: 1200px){
+    header .navbar a{
+        font-size: 1.3rem;
+    }
+
+    .featured .inner .box .price{
+        font-size: 1.2rem;
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+    }
+
+    .featured .inner .box .content h3{
+        font-size: 1.3rem;
+    }
+
+    .featured .inner .box .content p{
+        font-size: 1rem;
+    }
+    
+    .featured .btn{
+        font-size: 1.2rem;
+    }
+
+    .products .inner .box{
+        width: 48%;
+    }
+   
+}
